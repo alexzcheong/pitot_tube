@@ -1,0 +1,10 @@
+13:40:01 **** Incremental Build of configuration Debug for project pitotTube_Rev1 ****
+make -j7 all 
+arm-none-eabi-size  pitotTube_Rev1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5284	     20	   1652	   6956	   1b2c	pitotTube_Rev1.elf
+Finished building: default.size.stdout
+ 
+
+13:40:02 Build Finished. 0 errors, 0 warnings. (took 156ms)
+
