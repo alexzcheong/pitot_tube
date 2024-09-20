@@ -1,0 +1,276 @@
+!SESSION 2024-09-20 15:11:30.252 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/novelalam/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/novelalam/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-20 15:11:53.907
+!MESSAGE Log4j2 initialized with config file /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-20 15:11:58.951
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-09-20 15:12:09.976
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 0 2024-09-20 15:12:09.979
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.st.stm32cube.ide.mcu.ide' plug-in.
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2024-09-20 15:13:37.811 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/novelalam/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/novelalam/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-20 15:13:56.612
+!MESSAGE Log4j2 initialized with config file /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-20 15:14:02.251
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-09-20 15:14:12.965
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 0 2024-09-20 15:14:12.968
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.st.stm32cube.ide.mcu.ide' plug-in.
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.cdt.core 1 0 2024-09-20 15:15:10.601
+!MESSAGE Indexed 'pitotTubeTest' (28 sources, 89 headers) in 7.95 sec: 6,627 declarations; 45,298 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0039%)
+!SESSION 2024-09-20 15:54:08.060 -----------------------------------------------
+eclipse.buildId=Version 1.14.0
+java.version=17.0.8.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -keyring /Users/novelalam/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -keyring /Users/novelalam/.eclipse_keyring
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2024-09-20 15:54:18.929
+!MESSAGE Log4j2 initialized with config file /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/.metadata/.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2024-09-20 15:54:29.701
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.ui.workbench 4 2 2024-09-20 15:54:41.228
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui 4 0 2024-09-20 15:54:41.233
+!MESSAGE Unable to execute early startup code for the org.eclipse.ui.IStartup extension contributed by the 'com.st.stm32cube.ide.mcu.ide' plug-in.
+!STACK 0
+com.teamdev.jxbrowser.ObjectClosedException: Attempted to use a closed object.
+
+You're trying to call a method of a closed object. Usually, it happens when you
+call the `close()` method of an object (or its owner) prior to calling methods
+of that object.
+
+Another common cause of this exception is working with cached DOM or JavaScript
+objects. For example, if you navigate to another web page and try to call
+a method of a DOM or a JavaScript object from the previous page, you will get
+this exception.
+
+It's also possible that the native Chromium process has crashed. In that case,
+all the objects that belong to that process are closed automatically.
+
+The following article explains this exception in detail: https://links.teamdev.com/jxbrowser-object-closed-exception
+
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.checkNotClosed(ServiceConnectionImpl.java:243)
+	at com.teamdev.jxbrowser.internal.rpc.ServiceConnectionImpl.invoke(ServiceConnectionImpl.java:211)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadAndWait(NavigationImpl.java:227)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:104)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:91)
+	at com.teamdev.jxbrowser.navigation.internal.NavigationImpl.loadUrlAndWait(NavigationImpl.java:83)
+	at com.teamdev.jxbrowser.browser.internal.BrowserImpl.initializeMainFrame(BrowserImpl.java:401)
+	at com.teamdev.jxbrowser.profile.internal.ProfileImpl.newBrowser(ProfileImpl.java:150)
+	at com.st.microxplorer.plugins.userauth.WebApp.<init>(WebApp.java:166)
+	at com.st.microxplorer.plugins.userauth.WebApp.getInstance(WebApp.java:715)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getBrowserView(UserAuth.java:406)
+	at com.st.microxplorer.plugins.userauth.UserAuth.getSpecificTask(UserAuth.java:255)
+	at com.st.stm32cube.common.mx.userauth.UserAuthAdapter.addListener(UserAuthAdapter.java:51)
+	at com.st.stm32cube.ide.mcu.userauth.UserAuthStartup.earlyStartup(UserAuthStartup.java:42)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:79)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:55)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench$39.run(Workbench.java:2737)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
