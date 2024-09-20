@@ -99,9 +99,9 @@ int main(void) {
     uint8_t stop[] = {0x3F, 0xF9};
     HAL_StatusTypeDef ret;
     HAL_I2C_Master_Transmit(&hi2c1, SENSOR_ADDRESS, stop, sizeof(stop), HAL_MAX_DELAY);
-    HAL_Delay(1000);
+    HAL_Delay(20);
     ret = HAL_I2C_Master_Transmit(&hi2c1, SENSOR_ADDRESS, cmd, sizeof(cmd), HAL_MAX_DELAY);
-    HAL_Delay(1000);
+    HAL_Delay(20);
             if (ret != HAL_OK) {
                 char msg[] = "Failed to transmit I2C!\n\r";
                 HAL_UART_Transmit(&huart1, (uint8_t*)msg, strlen(msg), HAL_MAX_DELAY);
@@ -136,7 +136,7 @@ int main(void) {
     	                           HAL_UART_Transmit(&huart1, (uint8_t*)output, strlen(output), HAL_MAX_DELAY);
     	                       }
         // Delay between attempts
-        HAL_Delay(100); // 1 second delay
+        HAL_Delay(1); // 1 ms delay
     }
 }
 uint8_t calculateCRC(uint8_t *data, uint8_t length) {
