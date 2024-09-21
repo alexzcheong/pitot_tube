@@ -302,4 +302,4 @@ VP_SYS_VS_Systick.Mode=SysTick
 VP_SYS_VS_Systick.Signal=SYS_VS_Systick
 board=STM32F3DISCOVERY
 boardIOC=true
-isbadioc=true
+isbadioc=false

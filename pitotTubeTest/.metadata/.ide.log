@@ -1734,3 +1734,43 @@
 2024-09-20 15:55:02,511 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
 2024-09-20 15:55:02,513 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
 2024-09-20 15:55:02,514 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2024-09-20 15:56:10,440 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 667936176 Bytes (1073741824)
+2024-09-20 15:56:11,226 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SPI
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: I2C
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USART
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: USB
+2024-09-20 15:56:11,227 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-09-20 15:56:11,229 [INFO] CodeGenerator:807 - code generatio: config db path: /Applications/STM32CubeIDE.app/Contents/Eclipse/plugins/com.st.stm32cube.common.mx_6.10.0.202311202037//db/
+2024-09-20 15:56:11,287 [WARN] IP:2119 - lpm_enable not found: check if there is a RefParameter without a condition.
+2024-09-20 15:56:11,754 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/license.tmp_save
+2024-09-20 15:56:12,446 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/license.tmp
+2024-09-20 15:56:12,833 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/gpio.tmp_save
+2024-09-20 15:56:13,065 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/gpio.tmp
+2024-09-20 15:56:13,783 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/stm32f3xx_it.c_save
+2024-09-20 15:56:14,095 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/stm32f3xx_it.c
+2024-09-20 15:56:14,105 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/stm32f3xx_it.h_save
+2024-09-20 15:56:14,166 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/stm32f3xx_it.h
+2024-09-20 15:56:14,179 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/stm32f3xx_hal_msp.c_save
+2024-09-20 15:56:14,326 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/stm32f3xx_hal_msp.c
+2024-09-20 15:56:14,328 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/system.tmp_save
+2024-09-20 15:56:14,394 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/MXTmpFiles/system.tmp
+2024-09-20 15:56:14,400 [INFO] CodeEngine:311 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/stm32f3xx_hal_conf.h_save
+2024-09-20 15:56:14,477 [INFO] CodeEngine:335 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/stm32f3xx_hal_conf.h
+2024-09-20 15:56:14,577 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/main.h_save
+2024-09-20 15:56:14,716 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Inc/main.h
+2024-09-20 15:56:14,720 [INFO] CodeEngine:255 - oldGeneratedFile, /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/main.c_save
+2024-09-20 15:56:15,018 [INFO] CodeEngine:279 - Generated code: /Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/Core/Src/main.c
+2024-09-20 15:56:15,655 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 104mS.
+2024-09-20 15:56:15,678 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-09-20 15:56:16,165 [INFO] ConfigFileManager:1495 - The Die is : DIE422
+2024-09-20 15:56:16,186 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-09-20 15:56:16,198 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-09-20 15:56:16,233 [INFO] ApiDbMcu:508 - Load IP Config File for TOUCHSENSING
+2024-09-20 15:56:16,246 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-09-20 15:56:17,278 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-09-20 15:56:20,635 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 4950mS.
+2024-09-20 15:56:20,641 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
+2024-09-20 15:56:20,643 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.

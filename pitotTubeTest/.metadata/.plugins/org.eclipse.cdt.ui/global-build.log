@@ -1,14 +1,42 @@
-15:53:10 **** Incremental Build of configuration Debug for project pitotTubeTest ****
+16:58:07 **** Incremental Build of configuration Debug for project pitotTubeTest ****
 make -j7 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xC -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:166:7: warning: implicit declaration of function 'snprintf' [-Wimplicit-function-declaration]
+  166 |       snprintf(output, sizeof(output), "Differential unscaled %d, scalefactor: %d\n", diffPressureUnScaled, scaleFactorDP);
+      |       ^~~~~~~~
+../Core/Src/main.c:23:1: note: include '<stdio.h>' or provide a declaration of 'snprintf'
+   22 | #include <string.h>
+  +++ |+#include <stdio.h>
+   23 | 
+../Core/Src/main.c:166:7: warning: incompatible implicit declaration of built-in function 'snprintf' [-Wbuiltin-declaration-mismatch]
+  166 |       snprintf(output, sizeof(output), "Differential unscaled %d, scalefactor: %d\n", diffPressureUnScaled, scaleFactorDP);
+      |       ^~~~~~~~
+../Core/Src/main.c:166:7: note: include '<stdio.h>' or provide a declaration of 'snprintf'
+../Core/Src/main.c:120:12: warning: variable 'scaledDP' set but not used [-Wunused-but-set-variable]
+  120 |   uint16_t scaledDP;
+      |            ^~~~~~~~
+../Core/Src/main.c:119:12: warning: variable 'scaledTemp' set but not used [-Wunused-but-set-variable]
+  119 |   uint16_t scaledTemp;
+      |            ^~~~~~~~~~
+At top level:
+../Core/Src/main.c:362:13: warning: 'MX_USB_PCD_Init' defined but not used [-Wunused-function]
+  362 | static void MX_USB_PCD_Init(void) {
+      |             ^~~~~~~~~~~~~~~
+../Core/Src/main.c:291:13: warning: 'MX_SPI1_Init' defined but not used [-Wunused-function]
+  291 | static void MX_SPI1_Init(void) {
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:63:15: warning: 'pitotAddress' defined but not used [-Wunused-const-variable=]
+   63 | const uint8_t pitotAddress = 0x25 << 1; //last bit reserved for R/W
+      |               ^~~~~~~~~~~~
+arm-none-eabi-gcc -o "pitotTubeTest.elf" @"objects.list"   -mcpu=cortex-m4 -T"/Users/novelalam/newPitotTube/pitot_tube/pitotTubeTest/pitotTubeTest/STM32F303VCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="pitotTubeTest.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: pitotTubeTest.elf
+ 
 arm-none-eabi-size  pitotTubeTest.elf 
+arm-none-eabi-objdump -h -S pitotTubeTest.elf  > "pitotTubeTest.list"
    text	   data	    bss	    dec	    hex	filename
-  15628	     20	   1788	  17436	   441c	pitotTubeTest.elf
+  20380	    100	   2124	  22604	   584c	pitotTubeTest.elf
 Finished building: default.size.stdout
  
-15:53:48 **** Incremental Build of configuration Debug for project pitotTubeTest ****
-make -j7 all 
-arm-none-eabi-size  pitotTubeTest.elf 
-   text	   data	    bss	    dec	    hex	filename
-  15628	     20	   1788	  17436	   441c	pitotTubeTest.elf
-Finished building: default.size.stdout
+Finished building: pitotTubeTest.list
  

@@ -110,10 +110,14 @@ int main(void) {
     0xF9
   };
 
+
+
   /* variable for temperature, scaleFactor, and diffPressure*/
-  uint16_t tempUnScaled, diffPressureUnScaled, scaleFactorDP;
-  float scaledTemp;
-  float scaledDP;
+  uint16_t tempUnScaled;
+  int16_t diffPressureUnScaled;
+  uint16_t scaleFactorDP;
+  uint16_t scaledTemp;
+  uint16_t scaledDP;
 
   HAL_StatusTypeDef ret;
   HAL_I2C_Master_Transmit( & hi2c1, SENSOR_ADDRESS, stop, sizeof(stop), HAL_MAX_DELAY);
@@ -142,7 +146,7 @@ int main(void) {
     } else {
       /* populate temp buf[3] is msb of temp, buf[4] is lsb of temp*/
       tempUnScaled = ((buf[3] << 8) | buf[4]);
-      scaledTemp = tempUnScaled / scaledTemp;
+      scaledTemp = (int)tempUnScaled / tempScaleFactor;
 
       /* populate differential pressure, buf[0] is dp msb, buf[1] is db lsb */
       diffPressureUnScaled = (buf[0] << 8) | buf[1];
@@ -152,15 +156,18 @@ int main(void) {
 
 
       /* pressure is equal to diffPressureUnScaled / scaleFactorDP */
-      scaledDP =  diffPressureUnScaled / (float) scaleFactorDP;
+      scaledDP =  diffPressureUnScaled /scaleFactorDP;
 
       // Process and print product identifier
       char output[64];
-      //snprintf(output, sizeof(output), "Differential Pressure %f, Temperature: %f", scaledDP, scaledTemp);
+      //snprintf(output, sizeof(output), "Differential Pressure %d, Temperature: %d\n", scaledDP, scaledTemp);
+      HAL_UART_Transmit( & huart1, (uint8_t * ) output, strlen(output), HAL_MAX_DELAY);
+
+      snprintf(output, sizeof(output), "Differential unscaled %d, scalefactor: %d\n", diffPressureUnScaled, scaleFactorDP);
       HAL_UART_Transmit( & huart1, (uint8_t * ) output, strlen(output), HAL_MAX_DELAY);
     }
     // Delay between attempts
-    HAL_Delay(1); // 1 ms delay
+    HAL_Delay(100); // 1 ms delay
   }
 }
 uint8_t calculateCRC(uint8_t * data, uint8_t length) {
